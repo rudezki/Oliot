@@ -113,6 +113,9 @@ namespace Elaimet
 
             Console.WriteLine(koiruli.palautaElaimenNimi);
 
+            //Testataan koiran ääntelyä.
+            koiruli.Aantelee();
+
             Console.ReadKey();
         }
 }

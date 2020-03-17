@@ -68,5 +68,9 @@ namespace ElainLuokat
                 age = value;
             }
         }
+        public void Aantelee()
+        {
+            Console.WriteLine("Umph!");
+        }
     }
 }

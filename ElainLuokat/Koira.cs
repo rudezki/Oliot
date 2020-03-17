@@ -7,7 +7,7 @@ using ElainLuokat;
 
 namespace Elaimet
 {
-    public class Koira : Elain
+    public class Koira : Nisakkaat
     {
         public Koira(int age, string name)
         {
@@ -17,7 +17,10 @@ namespace Elaimet
         {
 
         }
-
+        public void Aantelee()
+        {
+            Console.WriteLine("Hau!");
+        }
     }
 
 }

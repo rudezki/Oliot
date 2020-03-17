@@ -12,14 +12,15 @@ namespace Periytyminen
     {
         static void Main(string[] args)
         {
-            Elain mila = new Kissa();
+            Kissa mila = new Kissa();
             mila.asetaElaimenNimi("Mila");
             mila.asetaElaimenIka(10);
             mila.asetaOnLihanSyoja(true);
             Console.WriteLine(mila.palautaElaimenNimi + ", " + mila.palautaElaimenIka + " vuotta. ");
             mila.palautaOnLihanSyoja();
+            mila.Kehraa();
 
-            Elain rico = new Koira();
+            Koira rico = new Koira();
             rico.asetaElaimenNimi("Rico");
             rico.asetaElaimenIka(6);
             rico.asetaOnLihanSyoja(true);
