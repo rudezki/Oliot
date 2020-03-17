@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Elaimet;
+using ElainLuokat;
 
 namespace Periytyminen
 {
@@ -11,11 +12,22 @@ namespace Periytyminen
     {
         static void Main(string[] args)
         {
-            Kissa mila = new Kissa();
+            Elain mila = new Kissa();
             mila.asetaElaimenNimi("Mila");
             mila.asetaElaimenIka(10);
             mila.asetaOnLihanSyoja(true);
-            Console.WriteLine(mila.palautaElaimenNimi + ", " + mila.palautaElaimenIka);
+            Console.WriteLine(mila.palautaElaimenNimi + ", " + mila.palautaElaimenIka + " vuotta. ");
+            mila.palautaOnLihanSyoja();
+
+            Elain rico = new Koira();
+            rico.asetaElaimenNimi("Rico");
+            rico.asetaElaimenIka(6);
+            rico.asetaOnLihanSyoja(true);
+            Console.WriteLine(rico.palautaElaimenNimi + ", " + rico.palautaElaimenIka);
+            rico.palautaOnLihanSyoja();
+            Console.ReadKey();
+            
         }
     }
 }
+

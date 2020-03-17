@@ -29,15 +29,15 @@ namespace ElainLuokat
         {
             this.name = name;
         }
-        public bool palautaOnLihanSyoja
+        public void palautaOnLihanSyoja()
         {
-            get
+            if (this.onLihanSyoja)
             {
-                return onLihanSyoja;
+                 Console.WriteLine("Eläin on lihansyöjä");
             }
-            set
+            else
             {
-                onLihanSyoja = value;
+                Console.WriteLine("Eläin ei ole lihansyöjä");
             }
         }
         public void asetaOnLihanSyoja(bool lihis)
