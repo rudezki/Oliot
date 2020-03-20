@@ -115,6 +115,12 @@ namespace Elaimet
 
             //Testataan koiran ääntelyä.
             koiruli.Aantelee();
+            anneli.Aantelee();
+
+            //Luodaan Elain-olio.
+            Elain jussi = new Elain();
+            jussi.Aantelee();
+
 
             Console.ReadKey();
         }

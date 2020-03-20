@@ -8,9 +8,6 @@ namespace ElainLuokat
 {
     class Papukaija : Linnut
     {
-        public void Aantelee()
-        {
-
-        }
+ 
     }
 }

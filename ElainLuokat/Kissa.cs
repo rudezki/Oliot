@@ -24,7 +24,7 @@ namespace Elaimet
         }
         public void Aantelee()
         {
-
+            Console.WriteLine("Miau!");
         }
     }
     
