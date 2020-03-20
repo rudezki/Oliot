@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ElainLuokat
 {
-    public class Elain
+    public abstract class Elain
     {
         private int age = 0;
         private string name;
@@ -68,7 +68,7 @@ namespace ElainLuokat
                 age = value;
             }
         }
-        public void Aantelee()
+        public virtual void Aantelee()
         {
             Console.WriteLine("Umph!");
         }

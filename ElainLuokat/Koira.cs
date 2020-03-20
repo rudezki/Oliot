@@ -17,7 +17,7 @@ namespace Elaimet
         {
 
         }
-        public void Aantelee()
+        public override void Aantelee()
         {
             Console.WriteLine("Hau!");
         }

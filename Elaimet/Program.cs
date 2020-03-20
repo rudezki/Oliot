@@ -118,8 +118,43 @@ namespace Elaimet
             anneli.Aantelee();
 
             //Luodaan Elain-olio.
-            Elain jussi = new Elain();
-            jussi.Aantelee();
+            //Elain jussi = new Elain(); Ei enää toimi
+            //jussi.Aantelee();
+
+            //5) Luodaan uusi Koira-olio ja asetetaan sille vain nisäkkäille kuuluva ominaisuus
+            Koira elmo = new Koira();
+            elmo.asetaElaimenNimi("Elmo");
+            elmo.asetaElaimenIka(10);
+            elmo.asetaOnKohtu(true);
+
+            //6) Luodaan uusi Papukaija - olio ja asetataan sille: nimi, ikä ja vain linnuille kuuluva ominaisuus
+            Papukaija ronski = new Papukaija();
+            ronski.asetaElaimenNimi("Ronski");
+            ronski.asetaOnKloaakki(true);
+            ronski.asetaElaimenIka(10);
+
+            //7) Tulostetaan molempien nimi, ikä sekä erikoisominaisuuden arvo.
+            Console.WriteLine(elmo.palautaElaimenNimi);
+            Console.WriteLine(elmo.palautaElaimenIka + "v");
+            if (elmo.palautaOnKohtu())
+            {
+                Console.WriteLine("Eläimellä on kohtu.");
+            }
+            else
+            {
+                Console.WriteLine("Eläimellä ei ole kohtua.");
+            }
+            Console.WriteLine(ronski.palautaElaimenNimi);
+            Console.WriteLine(ronski.palautaElaimenIka + "v");
+            if (ronski.palautaOnKloaakki())
+            {
+                Console.WriteLine("Eläimellä on kloaakki.");
+            }
+            else
+            {
+                Console.WriteLine("Eläimellä ei ole kloaakki.");
+            }
+
 
 
             Console.ReadKey();

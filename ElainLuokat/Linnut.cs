@@ -8,6 +8,14 @@ namespace ElainLuokat
 {
     public class Linnut : Elain
     {
-
+        private bool cloaca;
+        public void asetaOnKloaakki(bool setkloaakki)
+        {
+            this.cloaca = setkloaakki;
+        }
+        public bool palautaOnKloaakki()
+        {
+            return this.cloaca;
+        }
     }
 }

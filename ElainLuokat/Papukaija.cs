@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ElainLuokat
 {
-    class Papukaija : Linnut
+    public class Papukaija : Linnut
     {
  
     }

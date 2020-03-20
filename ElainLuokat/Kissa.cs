@@ -22,7 +22,7 @@ namespace Elaimet
         {
             Console.WriteLine("Hrrrr");
         }
-        public void Aantelee()
+        public override void Aantelee()
         {
             Console.WriteLine("Miau!");
         }
