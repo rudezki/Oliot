@@ -9,6 +9,7 @@ namespace Elaimet
 {
     public class Kissa : Nisakkaat
     {
+        private string name = "kissa";
         public Kissa(int age, string name)
         {
 

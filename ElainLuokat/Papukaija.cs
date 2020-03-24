@@ -8,6 +8,18 @@ namespace ElainLuokat
 {
     public class Papukaija : Linnut
     {
- 
+        private string name = "kaija";
+        public Papukaija(int age, string name)
+        {
+
+        }
+        public Papukaija()
+        {
+
+        }
+        public override void Aantelee()
+        {
+            Console.WriteLine("Kraak!");
+        }
     }
 }

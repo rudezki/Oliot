@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ElainLuokat;
 
 namespace Elaimet
 {   //Esitellään luokka eli class. Koodi olisi voinut olla Program.cs tiedostossa mutta selkeyden takia luomme jokaisen luokan
     //omaan tiedostoonsa
-    public class Hevonen
+    public class Hevonen : Nisakkaat
     {
-        private string nimi;
+        private string nimi = "heppa";
         private int paino;
         //Alla konstruktori jossa ei ola parametreja, joten kaikki luokasta 
         //synnytetyt oliot ovat samanlaisia. Konstruktorin tunnistaa siitä
@@ -20,6 +21,10 @@ namespace Elaimet
             //Luokan sisällä voidaan käyttää privaatti kenttiä
             nimi = "";
             paino = 0;
+        }
+        public Hevonen(int age, string name)
+        {
+
         }
         //getterillä ja setterillä annetaan luokan ulkopuolisille sovelluksille mahdollisuus 
         //asettaa tai hakea kenttiä

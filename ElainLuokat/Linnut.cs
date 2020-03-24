@@ -13,9 +13,16 @@ namespace ElainLuokat
         {
             this.cloaca = setkloaakki;
         }
-        public bool palautaOnKloaakki()
+        public void palautaOnKloaakki()
         {
-            return this.cloaca;
+            if (this.cloaca)
+            {
+                Console.WriteLine("Eläimellä on kloaakki");
+            }
+            else
+            {
+                Console.WriteLine("Eläimellä ei ole kloaakkia");
+            }
         }
     }
 }
