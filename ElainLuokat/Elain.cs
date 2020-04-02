@@ -18,18 +18,18 @@ namespace ElainLuokat
             this.age = age;
             this.name = name;
         }
-        public void asetaElaimenIka(int age)
+        public void AsetaElaimenIka(int age)
         {
             if (age >= 0)
             {
                 this.age = age;
             }
         }
-        public void asetaElaimenNimi(string name)
+        public void AsetaElaimenNimi(string name)
         {
             this.name = name;
         }
-        public void palautaOnLihanSyoja()
+        public void PalautaOnLihanSyoja()
         {
             if (this.onLihanSyoja)
             {
@@ -40,11 +40,11 @@ namespace ElainLuokat
                 Console.WriteLine("Eläin ei ole lihansyöjä");
             }
         }
-        public void asetaOnLihanSyoja(bool lihis)
+        public void AsetaOnLihanSyoja(bool lihis)
         {
             this.onLihanSyoja = lihis;
         }
-        public string palautaElaimenNimi
+        public string PalautaElaimenNimi
         {
             get
             {
@@ -56,7 +56,7 @@ namespace ElainLuokat
                 name = value;
             }
         }
-        public int palautaElaimenIka
+        public int PalautaElaimenIka
         {
             get
             {

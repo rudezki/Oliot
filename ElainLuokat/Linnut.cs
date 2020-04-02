@@ -9,11 +9,11 @@ namespace ElainLuokat
     public class Linnut : Elain
     {
         private bool cloaca;
-        public void asetaOnKloaakki(bool setkloaakki)
+        public void AsetaOnKloaakki(bool setkloaakki)
         {
             this.cloaca = setkloaakki;
         }
-        public void palautaOnKloaakki()
+        public void PalautaOnKloaakki()
         {
             if (this.cloaca)
             {

@@ -22,10 +22,10 @@ namespace silmukka
                 if (i % 4 == 0)
                 {
                     Nisakkaat elukka = new Hevonen();
-                    elukka.asetaElaimenNimi("heppa");
-                    elukka.asetaElaimenIka(5);
-                    elukka.asetaOnLihanSyoja(false);
-                    elukka.asetaOnKohtu(true);
+                    elukka.AsetaElaimenNimi("heppa");
+                    elukka.AsetaElaimenIka(5);
+                    elukka.AsetaOnLihanSyoja(false);
+                    elukka.AsetaOnKohtu(true);
                     elukat.Add(elukka);
                     q++;
                     if (q == 4)
@@ -36,61 +36,61 @@ namespace silmukka
                 else if (q == 1)
                 {
                     Nisakkaat elukka = new Kissa();
-                    elukka.asetaElaimenNimi("kissa");
-                    elukka.asetaElaimenIka(2);
-                    elukka.asetaOnLihanSyoja(true);
-                    elukka.asetaOnKohtu(true);
+                    elukka.AsetaElaimenNimi("kissa");
+                    elukka.AsetaElaimenIka(2);
+                    elukka.AsetaOnLihanSyoja(true);
+                    elukka.AsetaOnKohtu(true);
                     elukat.Add(elukka);
                     q++;
                 }
                 else if (q == 2)
                 {
                     Nisakkaat elukka = new Koira();
-                    elukka.asetaElaimenNimi("koira");
-                    elukka.asetaElaimenIka(1);
-                    elukka.asetaOnLihanSyoja(true);
-                    elukka.asetaOnKohtu(true);
+                    elukka.AsetaElaimenNimi("koira");
+                    elukka.AsetaElaimenIka(1);
+                    elukka.AsetaOnLihanSyoja(true);
+                    elukka.AsetaOnKohtu(true);
                     elukat.Add(elukka);
                     q++;
                 }
                 else if (q == 3)
                 {
                     Linnut elukka = new Papukaija();
-                    elukka.asetaElaimenNimi("kaija");
-                    elukka.asetaElaimenIka(20);
-                    elukka.asetaOnLihanSyoja(false);
-                    elukka.asetaOnKloaakki(true);
+                    elukka.AsetaElaimenNimi("kaija");
+                    elukka.AsetaElaimenIka(20);
+                    elukka.AsetaOnLihanSyoja(false);
+                    elukka.AsetaOnKloaakki(true);
                     elukat.Add(elukka);
                     q = 1;
                 }
             }
             foreach (Linnut kaija in elukat.OfType<Papukaija>())
             {
-                Console.WriteLine(kaija.palautaElaimenIka);
-                Console.WriteLine(kaija.palautaElaimenNimi);
-                kaija.palautaOnLihanSyoja();
-                kaija.palautaOnKloaakki();
+                Console.WriteLine(kaija.PalautaElaimenIka);
+                Console.WriteLine(kaija.PalautaElaimenNimi);
+                kaija.PalautaOnLihanSyoja();
+                kaija.PalautaOnKloaakki();
             }
             foreach (Nisakkaat kissa in elukat.OfType<Kissa>())
             {
-                Console.WriteLine(kissa.palautaElaimenIka);
-                Console.WriteLine(kissa.palautaElaimenNimi);
-                kissa.palautaOnLihanSyoja();
-                kissa.palautaOnKohtu();
+                Console.WriteLine(kissa.PalautaElaimenIka);
+                Console.WriteLine(kissa.PalautaElaimenNimi);
+                kissa.PalautaOnLihanSyoja();
+                kissa.PalautaOnKohtu();
             }
             foreach (Nisakkaat koira in elukat.OfType<Koira>())
             {
-                Console.WriteLine(koira.palautaElaimenIka);
-                Console.WriteLine(koira.palautaElaimenNimi);
-                koira.palautaOnLihanSyoja();
-                koira.palautaOnKohtu();
+                Console.WriteLine(koira.PalautaElaimenIka);
+                Console.WriteLine(koira.PalautaElaimenNimi);
+                koira.PalautaOnLihanSyoja();
+                koira.PalautaOnKohtu();
             }
             foreach (Nisakkaat heppa in elukat.OfType<Hevonen>())
             {
-                Console.WriteLine(heppa.palautaElaimenIka);
-                Console.WriteLine(heppa.palautaElaimenNimi);
-                heppa.palautaOnLihanSyoja();
-                heppa.palautaOnKohtu();
+                Console.WriteLine(heppa.PalautaElaimenIka);
+                Console.WriteLine(heppa.PalautaElaimenNimi);
+                heppa.PalautaOnLihanSyoja();
+                heppa.PalautaOnKohtu();
             }
             
             Console.ReadKey();

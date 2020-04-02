@@ -13,19 +13,19 @@ namespace Periytyminen
         static void Main(string[] args)
         {
             Kissa mila = new Kissa();
-            mila.asetaElaimenNimi("Mila");
-            mila.asetaElaimenIka(10);
-            mila.asetaOnLihanSyoja(true);
-            Console.WriteLine(mila.palautaElaimenNimi + ", " + mila.palautaElaimenIka + " vuotta. ");
-            mila.palautaOnLihanSyoja();
+            mila.AsetaElaimenNimi("Mila");
+            mila.AsetaElaimenIka(10);
+            mila.AsetaOnLihanSyoja(true);
+            Console.WriteLine(mila.PalautaElaimenNimi + ", " + mila.PalautaElaimenIka + " vuotta. ");
+            mila.PalautaOnLihanSyoja();
             mila.Kehraa();
 
             Koira rico = new Koira();
-            rico.asetaElaimenNimi("Rico");
-            rico.asetaElaimenIka(6);
-            rico.asetaOnLihanSyoja(true);
-            Console.WriteLine(rico.palautaElaimenNimi + ", " + rico.palautaElaimenIka);
-            rico.palautaOnLihanSyoja();
+            rico.AsetaElaimenNimi("Rico");
+            rico.AsetaElaimenIka(6);
+            rico.AsetaOnLihanSyoja(true);
+            Console.WriteLine(rico.PalautaElaimenNimi + ", " + rico.PalautaElaimenIka);
+            rico.PalautaOnLihanSyoja();
             Console.ReadKey();
             
         }

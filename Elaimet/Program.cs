@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ElainLuokat;
+using Elaimet;
 
 /**
   
@@ -47,22 +48,22 @@ namespace Elaimet
 
             //2.Anna sen jälkeen kissalle nimi suoraan public muuttujalla.
 
-            Murre.palautaElaimenNimi = "Jarno";
+            Murre.PalautaElaimenNimi = "Jarno";
 
-            Console.WriteLine(Murre.palautaElaimenNimi);
+            Console.WriteLine(Murre.PalautaElaimenNimi);
 
-            Murre.asetaElaimenNimi("Murre");
+            Murre.AsetaElaimenNimi("Murre");
 
             //3. Tulosta kissan nimi.
 
-            Console.WriteLine(Murre.palautaElaimenNimi);
+            Console.WriteLine(Murre.PalautaElaimenNimi);
 
 
 
 
             //6. Tulosta kissan ikä.
 
-            Console.WriteLine(Murre.palautaElaimenIka);
+            Console.WriteLine(Murre.PalautaElaimenIka);
 
             //7. Tee uusi kissa-olio ja anna ikä ja nimi konstruktorissa.
 
@@ -70,7 +71,7 @@ namespace Elaimet
 
             //8. Tulosta uuden olion tiedot nimi ja ikä.
 
-            Console.WriteLine(Vinski.palautaElaimenNimi + " " + Vinski.palautaElaimenIka);
+            Console.WriteLine(Vinski.PalautaElaimenNimi + " " + Vinski.PalautaElaimenIka);
 
 
             //Luo uusi kissa - olio.
@@ -79,19 +80,19 @@ namespace Elaimet
 
             //ii.Aseta kissan nimeksi ensin "Anneli" ja tulostat onnistuuko se vai ei
 
-            anneli.asetaElaimenNimi("Anneli");
+            anneli.AsetaElaimenNimi("Anneli");
 
             //iii.Tulosta perään olion kissan sen hetkinen nimi
 
-            Console.WriteLine(anneli.palautaElaimenNimi);
+            Console.WriteLine(anneli.PalautaElaimenNimi);
 
             //iv.Asetat kissan nimeksi "Hilda" ja tulostat onnistuuko se vai ei
 
-            anneli.asetaElaimenNimi("Hilda");
+            anneli.AsetaElaimenNimi("Hilda");
 
             //v.Tulostat perään olion kissan sen hetkisen nimen
 
-            Console.WriteLine(anneli.palautaElaimenNimi);
+            Console.WriteLine(anneli.PalautaElaimenNimi);
 
             //  Luo uusi koira - olio.
 
@@ -99,19 +100,19 @@ namespace Elaimet
 
             //	Aseta koiran nimeksi ensin "Max" ja tulostat onnistuuko se vai ei
 
-            koiruli.asetaElaimenNimi("Max");
+            koiruli.AsetaElaimenNimi("Max");
 
             //  Tulosta perään olion koiran sen hetkinen nimi
 
-            Console.WriteLine(koiruli.palautaElaimenNimi);
+            Console.WriteLine(koiruli.PalautaElaimenNimi);
 
             //  Asetat koiran nimeksi "musti" ja tulostat onnistuuko se vai ei
 
-            koiruli.asetaElaimenNimi("musti");
+            koiruli.AsetaElaimenNimi("musti");
 
             //  Tulostat perään olion koiran sen hetkisen nimen
 
-            Console.WriteLine(koiruli.palautaElaimenNimi);
+            Console.WriteLine(koiruli.PalautaElaimenNimi);
 
             //Testataan koiran ääntelyä.
             koiruli.Aantelee();
@@ -123,20 +124,20 @@ namespace Elaimet
 
             //5) Luodaan uusi Koira-olio ja asetetaan sille vain nisäkkäille kuuluva ominaisuus
             Koira elmo = new Koira();
-            elmo.asetaElaimenNimi("Elmo");
-            elmo.asetaElaimenIka(10);
-            elmo.asetaOnKohtu(true);
+            elmo.AsetaElaimenNimi("Elmo");
+            elmo.AsetaElaimenIka(10);
+            elmo.AsetaOnKohtu(true);
 
             //6) Luodaan uusi Papukaija - olio ja asetataan sille: nimi, ikä ja vain linnuille kuuluva ominaisuus
             Papukaija ronski = new Papukaija();
-            ronski.asetaElaimenNimi("Ronski");
-            ronski.asetaOnKloaakki(true);
-            ronski.asetaElaimenIka(10);
+            ronski.AsetaElaimenNimi("Ronski");
+            ronski.AsetaOnKloaakki(true);
+            ronski.AsetaElaimenIka(10);
 
             //7) Tulostetaan molempien nimi, ikä sekä erikoisominaisuuden arvo.
-            Console.WriteLine(elmo.palautaElaimenNimi);
-            Console.WriteLine(elmo.palautaElaimenIka + "v");
-            if (elmo.palautaOnKohtu())
+            Console.WriteLine(elmo.PalautaElaimenNimi);
+            Console.WriteLine(elmo.PalautaElaimenIka + "v");
+            if (elmo.PalautaOnKohtu())
             {
                 Console.WriteLine("Eläimellä on kohtu.");
             }
@@ -144,19 +145,54 @@ namespace Elaimet
             {
                 Console.WriteLine("Eläimellä ei ole kohtua.");
             }
-            Console.WriteLine(ronski.palautaElaimenNimi);
-            Console.WriteLine(ronski.palautaElaimenIka + "v");
-            if (ronski.palautaOnKloaakki())
-            {
-                Console.WriteLine("Eläimellä on kloaakki.");
-            }
-            else
-            {
-                Console.WriteLine("Eläimellä ei ole kloaakki.");
-            }
+            Console.WriteLine(ronski.PalautaElaimenNimi);
+            Console.WriteLine(ronski.PalautaElaimenIka + "v");
+            ronski.PalautaOnKloaakki();
 
+            //pennuille tehdään emo ja lisätään sille kolme pentua.
+            List<Kissa> pennut = new List<Kissa>();
+            Kissa mutsi = new Kissa();
+            mutsi.AsetaElaimenNimi("mutsi");
+            Kissa koira = new Kissa();
+            koira.AsetaElaimenNimi("mursu");
+            koira.AsetaElaimenIka(0);
+            pennut.Add(koira);
+            Kissa koira1 = new Kissa();
+            koira1.AsetaElaimenNimi("pupper");
+            koira1.AsetaElaimenIka(0);
+            pennut.Add(koira1);
+            Kissa koira2 = new Kissa();
+            koira2.AsetaElaimenNimi("doggo");
+            koira2.AsetaElaimenIka(0);
+            pennut.Add(koira2);
+            koira.LisaaEmo(mutsi);
+            koira1.LisaaEmo(mutsi);
+            koira2.LisaaEmo(mutsi);
+            //Lisätään pennut emon kanssa listaan.
+            mutsi.LisaaPentu(pennut, mutsi);
+            mutsi.TulostaPennut();
 
+            //Luodaan uusi lista pennuista ja uusi emo.
 
+            List<Kissa> pennut2 = new List<Kissa>();
+            Kissa perskeles = new Kissa();
+            perskeles.AsetaElaimenIka(6);
+            perskeles.AsetaElaimenNimi("Vilma");
+            Kissa pentti = new Kissa();
+            pentti.AsetaElaimenIka(0);
+            pentti.AsetaElaimenNimi("pentti");
+            pennut2.Add(pentti);
+            Kissa pena = new Kissa();
+            pena.AsetaElaimenIka(0);
+            pena.AsetaElaimenNimi("pena");
+            pennut2.Add(pena);
+            Kissa pentele = new Kissa();
+            pentele.AsetaElaimenIka(0);
+            pentele.AsetaElaimenNimi("pentele");
+            pennut2.Add(pentele);
+            perskeles.LisaaPentu(pennut2, perskeles);
+            perskeles.TulostaPennut();
+            
             Console.ReadKey();
         }
 }

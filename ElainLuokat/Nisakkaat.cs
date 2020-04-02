@@ -9,11 +9,11 @@ namespace ElainLuokat
     public class Nisakkaat : Elain
     {
         private bool kohtu;
-        public void asetaOnKohtu(bool onkoKohtu)
+        public void AsetaOnKohtu(bool onkoKohtu)
         {
             this.kohtu = onkoKohtu;
         }
-        public bool palautaOnKohtu()
+        public bool PalautaOnKohtu()
         {
             return this.kohtu;
         }
