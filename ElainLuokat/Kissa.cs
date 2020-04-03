@@ -32,15 +32,20 @@ namespace Elaimet
             this.pentujenMaara++;
             foreach (Kissa pentu in pentuja)
             {
+                pentu.LisaaEmo(mutsi);
                 pennut.Add(pentu);
                 pentujenTiedot.Add(pentu);
-                LisaaEmo(mutsi);
             }
         }
 
         public void LisaaEmo(Kissa mom)
         {
             emo = mom;
+        }
+
+        public Kissa PalautaEmo()
+        {
+            return emo;
         }
 
         public void Kehraa()
@@ -54,11 +59,10 @@ namespace Elaimet
         
         public void TulostaPennut()
         {
-            Console.WriteLine(emo.PalautaElaimenNimi + ", " + emo.PalautaElaimenIka);
+            //  Console.WriteLine(emo.PalautaElaimenNimi + ", " + emo.PalautaElaimenIka);
             foreach (Kissa pentu in pentujenTiedot)
             {
-                Console.WriteLine(pentu.PalautaElaimenNimi + ", " + pentu.PalautaElaimenIka);
-                Console.WriteLine(pentu.emo.PalautaElaimenNimi);
+                Console.WriteLine(pentu.PalautaElaimenNimi + ", " + pentu.PalautaElaimenIka + ", " + pentu.emo.PalautaElaimenNimi);
             }
         }
     }

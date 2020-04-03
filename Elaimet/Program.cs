@@ -192,6 +192,8 @@ namespace Elaimet
             pennut2.Add(pentele);
             perskeles.LisaaPentu(pennut2, perskeles);
             perskeles.TulostaPennut();
+
+            
             
             Console.ReadKey();
         }
